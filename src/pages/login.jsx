@@ -45,7 +45,7 @@ function Login() {
             const data = {email:email,password:pass}
             
             await axios.post('http://localhost:3000/user/login', data)
-            .then(response => {            
+            .then(response => {                            
                 dispatch(addUser(response.data))
                 setEmail('')
                 setPass('')

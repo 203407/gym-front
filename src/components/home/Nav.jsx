@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
+
+import { useSelector } from "react-redux";
+
 function Nav(props) {
+    const user = useSelector((state) =>state.user)
     const navigate = useNavigate()
 
     const moveTOP = () => {        
@@ -22,12 +26,14 @@ function Nav(props) {
                 <img src={logo} alt="logo" className='logo' onClick={()=>moveTOH()}/>
                 
 
-                <ul className='ul__container'>
-                    
-                    <Link className={ props.pag == 1 ?  'nav__item selecte__item' : 'nav__item'}     to='/calorias'>Calorias</Link>
-                    <Link className={ props.pag == 2 ?  'nav__item selecte__item' : 'nav__item'} to='/rutinas'> Rutinas</Link>
-                    <Link className={ props.pag == 3 ?  'nav__item selecte__item' : 'nav__item'} to='/culturistas' >Culturistas</Link>
-                </ul>
+                <div className='ul__container'>
+                    <ul className='ul__nav'>                    
+                        <Link className={ props.pag == 1 ?  'nav__item selecte__item' : 'nav__item'} to='/calorias'>Calorias</Link>
+                        <Link className={ props.pag == 2 ?  'nav__item selecte__item' : 'nav__item'} to='/rutinas' state={user}> Rutinas</Link>
+                        <Link className={ props.pag == 3 ?  'nav__item selecte__item' : 'nav__item'} to='/culturistas' state={user} >Culturistas</Link>
+                    </ul>   
+                </div>                
+
                 <IconContext.Provider value={{ color: "white", className: "icon__provider" }}>
                     <CgProfile className='iconprofile' onClick={() => moveTOP()}/>
                 </IconContext.Provider>;

@@ -1,0 +1,67 @@
+.rutinas{
+    color: white;
+}
+
+.card__rutinas{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;    
+    background-color: #191919;        
+    filter: drop-shadow(-10px 10px #FA00FF)
+}
+
+.card__rutinas__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rutinas__expand{
+    margin-bottom: 60px;    
+}
+
+table {
+    font-family: 'IBM Plex Sans', sans-serif; 
+    border-collapse: collapse;
+    width: 100%;
+    border: 4px solid rgba(0, 209, 255, 0.5);
+    background-color: #373737;
+   width: 70%;
+   margin: 0 auto;
+   margin-top: 30px;
+   margin-bottom: 50px;
+}
+
+td,th { 
+    text-align: center;
+    padding: 8px;
+}
+
+td, tr{
+    border: 1px solid  white;
+}
+
+th{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.boton__section{
+    background-color: #7F7F7F;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.boton_contianer{
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -125px;
+}
+

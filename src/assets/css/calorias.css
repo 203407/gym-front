@@ -1,0 +1,60 @@
+.calorias{
+    color: white;
+}
+.card__calorias{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;    
+    background-color: #191919;        
+    filter: drop-shadow(-10px 10px #00E0FF)
+}
+
+.titlte{
+    text-align: center;
+    font-size: 40px;    
+}
+
+
+.what{
+    margin-top: 60px;
+}
+.parrafo__calorias{
+    text-align: justify;
+    padding-bottom: 15px;
+}
+.first__ul{
+    margin-top: 50px;
+    margin-bottom: 30px;    
+}
+
+
+.container__factor{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img__factor{
+    width: 60%;    
+}
+
+.parrafo{
+    margin-top: 60px;
+}
+
+.text__centrado{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;    
+}
+
+.subtitle{
+    margin-top: 30px;
+}
+
+.footer__other{
+    margin-top: 60px;
+}
