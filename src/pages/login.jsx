@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import '../assets/css/login-register.css'
+import '../assets/css/login.css'
 
 import wave from '../assets/img/wave.svg'
 
@@ -52,8 +52,7 @@ function Login() {
                 navigate('/home')
             })
             .catch(error => {
-
-                console.log(error)
+                
                 if(error.code !== "ERR_NETWORK"){
                     toast.error(error.response.data, { duration: 1500 });               
                 }else{

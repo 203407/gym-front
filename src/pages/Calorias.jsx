@@ -1,4 +1,4 @@
-import '../assets/css/home.css'
+// import '../assets/css/home.css'
 import Nav from '../components/home/Nav';
 import '../assets/css/calorias.css'
 import factor from '../assets/img/factor.png'

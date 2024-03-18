@@ -3,6 +3,8 @@ import t from '../../assets/img/t.png'
 import f from '../../assets/img/f.png'
 import i from '../../assets/img/i.png'
 
+import '../../assets/css/footer.css'
+
 const moveTOH = () => {        
     navigate('/home')
 }

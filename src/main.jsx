@@ -12,6 +12,9 @@ import Profile from './pages/Profile.jsx'
 import Calorias from './pages/Calorias.jsx'
 import Rutinas from './pages/Rutinas.jsx'
 import Culturistas  from './pages/Culturistas.jsx'
+import Chp from './components/profile/Chp.jsx'
+import Rutine from './components/profile/Rutine.jsx'
+import AddCulturista from './components/profile/AddCulturista.jsx'
 
   const router = createBrowserRouter([
     {
@@ -25,11 +28,7 @@ import Culturistas  from './pages/Culturistas.jsx'
     {
       path:"/home",
       element:<Home/>
-    },
-    {
-      path:"/profile",
-      element:<Profile/>
-    },
+    },    
     {
       path:"/calorias",
       element:<Calorias/>
@@ -40,7 +39,26 @@ import Culturistas  from './pages/Culturistas.jsx'
     },{
       path:"/rutinas",
       element:<Rutinas/>
-    }
+    },
+    {
+      path:"/profile",
+      element:<Profile/>,
+      children: [
+        {
+        path:"/profile/chpass",
+        element:<Chp/>
+        },
+        {
+          path:"/profile/rutine",
+          element:<Rutine/>
+        },
+        {
+          path:"/profile/culrutista",
+          element: <AddCulturista/>
+        }
+
+      ]
+    },
   ]);
 
 
@@ -81,7 +99,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>  
 
     <Provider store={store}>
-        <BrowserRouter  >
+
+    <RouterProvider router={router}>
+
+    </RouterProvider>
+
+        {/* <BrowserRouter  >
           <Routes>
                 <Route path="/" element={<Login></Login>}/> 
                 <Route path="/home" element={<Home></Home>}/> 
@@ -90,7 +113,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="/culturistas" element={<Culturistas></Culturistas>}/> 
                 <Route path="/rutinas" element={<Rutinas></Rutinas>}/> 
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
         {/* <MemoryRouter >
           <Routes>
               <Route path="/" element={<Login></Login>}/> 

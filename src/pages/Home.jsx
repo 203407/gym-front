@@ -17,8 +17,7 @@ function Home() {
                     </h1>
 
                     <img src={H} alt="home"  className='home__img'/>
-                </div>
-                {/* <img src={wave} alt=""  className='wave__home'/> */}
+                </div>                
             <Footer st={1} />
         </div>
      );

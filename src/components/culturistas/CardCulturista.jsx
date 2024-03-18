@@ -7,24 +7,24 @@ function CardCulturista(props) {
 
             <div className="text__container">
                 <div className="item1">
-                    <span>{props.name}</span>                     
+                    <span className="sp__cult">{props.name}</span>                     
                 </div>
 
                 <div className="item2">
-                    <span>Agregador por: </span>                     
-                    <span >{props.nameuser}</span>                                         
+                    <span className="sp__cult">Agregador por: </span>                     
+                    <span className="sp__cult" >{props.nameuser}</span>                                         
                 </div>                
 
                 <div className="item3">
-                    <span>Peso: {props.weight}</span>
+                    <span className="sp__cult">Peso: {props.weight}</span>
                 </div>
 
                 <div className="item4">
-                    <span>Estatura: {props.height}</span>
+                    <span className="sp__cult">Estatura: {props.height}</span>
                 </div>
 
                 <div className="item5">
-                    <span>Competiciones: {props.competitions}</span>
+                    <span className="sp__cult">Competiciones: {props.competitions}</span>
                 </div>                
                                                                              
             </div>

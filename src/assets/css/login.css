@@ -1,4 +1,4 @@
-/* .container{
+.container{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -8,13 +8,14 @@
 }   
 
 .card{
-    width: 25%;
-    height: 70vh;
+    width: 400px;
+    height: 500px;
     background-color: #FFFFFF;        
     border-radius: 10px;
     z-index: 20;
     position: relative;
 }
+
 
 .wave{
     position: absolute;    
@@ -37,7 +38,7 @@
     filter: drop-shadow(0px 2px 0px #0085FF);
     font-size: 20px;    
     height: 50px;    
-    width: 80%;    
+    width: 70%;    
     outline: none;    
 }
 
@@ -71,8 +72,7 @@
     bottom: 20px;    
     width: max-content;    
     left: 50%;
-    transform: translateX(-50%);
-  
+    transform: translateX(-50%);  
 }
 
 .login__create{
@@ -80,19 +80,30 @@
     text-decoration: none;
 }
 
-.register{
- height: 40px;   
+
+@media (max-width:1023px) {
+
+   
+    .card{
+        width: 300px;
+        height: 400px;
+    }
+
+    .login__button{       
+        font-size: 20px;        
+        padding: 12px 24px;       
+        margin-top: 20px;
+    }
+
+    .form{
+        margin-top: 12%;              
+    }
+
+    .login__input{       
+        font-size: 18px;    
+        height: 45px;    
+        width: 80%;    
+       
+    }    
+    
 }
-
-
-.container__message__back{
-    margin-top: 40px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 40px;
-}
-
-.login__back{
-    color: #0085FF;
-    text-decoration: none;
-} */

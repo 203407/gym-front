@@ -4,9 +4,10 @@
 
 .card__rutinas{
     margin: 0 auto;
-    margin-top: 30px;
-    width: 60%;
-    padding: 20px;
+    margin-top: 40px;
+    width: 800px;
+    padding: 10px;
+    padding-top: 20px;
     border-radius: 10px;    
     background-color: #191919;        
     filter: drop-shadow(-10px 10px #FA00FF)
@@ -33,6 +34,7 @@ table {
    margin: 0 auto;
    margin-top: 30px;
    margin-bottom: 50px;
+   border-collapse: collapse;
 }
 
 td,th { 
@@ -47,6 +49,9 @@ td, tr{
 th{
     font-size: 30px;
     font-weight: bold;
+    /* white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;  */
 }
 
 .boton__section{
@@ -58,10 +63,33 @@ th{
 }
 
 .boton_contianer{
-
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-left: -125px;
 }
 
+
+@media (max-width:1024px) {
+    th{
+        font-size: 20px;            
+    }
+
+    .card__rutinas{        
+        width: 500px;      
+    }
+
+
+    .boton__section{
+        background-color: #7F7F7F;
+        color: white;
+        padding: 8px 14px;        
+        font-size: 17px;
+    }
+
+    .boton_contianer{        
+        margin-left: -70px;
+        margin-bottom: 10px;
+    }
+
+}

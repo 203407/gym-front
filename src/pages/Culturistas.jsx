@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CardCulturista from '../components/culturistas/CardCulturista';
 
+import Footer from '../components/home/Footer';
 function Culturistas() {
 
     const token = useSelector((state) =>state.user.token )    
@@ -35,11 +36,15 @@ function Culturistas() {
             {
                 culturistas.map(element => (
                     <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>
+                    // <CardCulturista key={element.id} picture={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>
                 ))
 
             }
+
             
-            {/* <h1 className='title'>{token}</h1> */}
+        {
+            culturistas.length > 0 ? <Footer/> :null
+        }           
         </div>
      );
 }

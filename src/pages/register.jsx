@@ -2,7 +2,7 @@
 // import { useSelector } from "react-redux";
 
 
-import '../assets/css/login-register.css'
+import '../assets/css/register.css'
 import wave from '../assets/img/wave.svg'
 import RegisterForm from "../components/register/RegisterForm";
 
@@ -16,7 +16,6 @@ import axios from 'axios';
 function Register() {
 
     // const user = useSelector((state) =>state.user )
-
 
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
@@ -47,7 +46,7 @@ function Register() {
             
             await axios.post('http://localhost:3000/user', data)
             .then(response => {                                     
-                toast("Creado correctamente",{duration:500})
+                toast.success("Creado correctamente",{duration:500})
 
                 setTimeout(()=>{
                     navigate('/')
@@ -66,21 +65,21 @@ function Register() {
 
     return (  
 
-        <div className="container">
+        <div className="register__container">
 
             <Toaster
                 position="top-center"
                 reverseOrder={false}            
             />
 
-            <div className="card">
-            <h1 className="tittle">Registro</h1>
-            <RegisterForm send={sendRequest} handlechangename={handlechangename} 
-            handlechangeemail={handlechangeemail}
-            handlechangepassword={handlechangepassword}
-            />
+            <div className="register__card">
+                <h1 className="register__tittle">Registro</h1>
+                <RegisterForm send={sendRequest} handlechangename={handlechangename} 
+                handlechangeemail={handlechangeemail}
+                handlechangepassword={handlechangepassword}
+                />
 
-            <div className='container__message__back'>
+            <div className='register__container__message__back'>
                 <Link className='login__back' to={'/'}>Regresar al login</Link>
             </div>
             </div>

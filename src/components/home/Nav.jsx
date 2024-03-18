@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
-
+import '../../assets/css/nav.css'
 import { useSelector } from "react-redux";
 
 function Nav(props) {
@@ -36,7 +36,7 @@ function Nav(props) {
 
                 <IconContext.Provider value={{ color: "white", className: "icon__provider" }}>
                     <CgProfile className='iconprofile' onClick={() => moveTOP()}/>
-                </IconContext.Provider>;
+                </IconContext.Provider>
   
             </nav>
         </header>

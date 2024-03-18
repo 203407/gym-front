@@ -1,0 +1,356 @@
+
+.profile__container{
+
+    background-color: #373636;
+    position: absolute;    
+    top: 20%;
+    left: 35%;
+    border-radius: 10px;    
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.disa{
+    display: inline;
+}
+
+
+
+.main__container__both{
+    background-color: #373636;
+    position: absolute;    
+    top: 0;
+    left: 25%;      
+    border-radius: 10px;    
+    width: 70%;
+    height: max-content;    
+    /* height: clamp(300px,100vh,100vh); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    color: white;        
+}
+
+.icon__provider__profile{
+    height:50px;   
+    width: 35px;             
+}
+.icon__add{
+    cursor: pointer;
+}
+
+
+.add__container{
+    width: 65%;
+    margin: 20px 0;
+    
+}
+
+.notShow{    
+    display: none;
+    
+}
+
+.trueshow{
+    background-color: #191919;
+    width: 60%;
+    height: max-content;    
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+
+
+
+.inpust__section__container{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;    
+    margin: 20px 0;
+}
+
+.input__section{
+    display: block;
+    background-color: #D3D3D3;
+    border: none;    
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 0px #0085FF);
+    font-size: 20px;    
+    height: 30px;    
+    width: 40%;    
+    outline: none;    
+}
+
+.tittle__section{
+    font-size: 20px;
+    text-align:start;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.add__section{
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px 10px;
+    margin-bottom: 30px;
+    cursor: pointer;    
+}
+
+.textfield{
+    display: block;
+    background-color: #D3D3D3;
+    border: none;    
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 0px #0085FF);
+    font-size: 20px;    
+    height: 30px;    
+    /* width: 40%;     */
+    outline: none;    
+}
+
+.input__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.first__data__container{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.title__container__dialog{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;    
+}
+.add__ejercios__dialog{
+    background-color: #7F7F7F;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    padding: 3px 6px;
+    margin: 20px 0 ;
+}
+
+.dialog__ruine{
+    background-color:#191919 ;
+    color: white;
+}
+
+.dialog__ruine__buttons{
+    background-color:#191919 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.bt__actions{
+    background-color: #7F7F7F;
+    /* border: none; */
+    color: white;
+    font-size: 17px;
+    padding: 3px 6px;
+    margin: 0 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.out__rutines{
+    margin-top: 20px;
+}
+.actions{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.save__icon{
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.inputs__creates{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.input__ejercices{
+    border-radius: 5px ;    
+}
+
+.modifi__add{    
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.modifi__add__provider{
+    height: 25px;
+    width: 25px;
+}
+
+.actions__culturist{
+    width: 80%;
+    position:absolute;
+    right: 0;
+    /* margin: 0 auto;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center; */
+}
+
+
+.item__container{
+    /* width: 80%; */
+}
+
+
+
+.input__sectionv2{
+    display: block;
+    background-color: #D3D3D3;
+    border: none;    
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 0px #0085FF);
+    font-size: 20px;    
+    height: 35px;    
+    width: 250px;    
+    outline: none;    
+}
+
+
+/*  */
+
+.inpust__section__containerv2{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;    
+    margin: 20px 0;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+/* .save__icon__culrutist{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+} */
+
+.cul__action__butons{
+    display: flex;
+    width: 80%;
+    padding: 20px 0;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.btn___add__culturist{
+    font-size: 18px;
+    /* padding: 5px 35px; */
+    width: 160px;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: #7F7F7F;
+    color: white;
+    cursor: pointer;
+}
+
+.dropzone{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    width: 400px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.change__drop{
+    background-color: #ff9560;
+    color: white;
+}
+
+
+
+
+@media (max-width:1024px) {
+    
+    .main__container__both{    
+        left: 22.5%;          
+        width: 75%;    
+    }
+
+
+    /*add section rutine  */
+
+    .tittle__section{
+        font-size: 18px;
+        width: 60%;        
+    }
+
+
+    .input__section{        
+        font-size: 18px;    
+        height: 30px;    
+        width: 60%;                
+    }
+
+
+    .add__section{        
+        font-size: 18px;        
+    }
+
+    .save__icon{
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+
+    /* add culturista */
+
+        
+    .input__sectionv2{        
+        font-size: 18px;    
+        
+    }
+
+    .dropzone{
+       
+        width: 280px;
+        height: 70px;
+      
+    }
+    
+    .p__drop{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+}
