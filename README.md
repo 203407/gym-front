@@ -14,4 +14,4 @@ Secciones:
 El backend esta hecho con node js 
   link: https://github.com/raulalvarezids/gym-api
 
-link deploy: https://65fb440c69184a1c4683dc59--personal-gym-blog.netlify.app
+link deploy: https://65fb4774c9fa881edb18b88e--personal-gym-blog.netlify.app
