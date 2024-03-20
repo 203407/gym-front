@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {createBrowserRouter, RouterProvider, MemoryRouter , createMemoryRouter,  Routes, Route,BrowserRouter } from 'react-router-dom'
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './pages/login.jsx'
 import Register from './pages/register.jsx'
 import Home from './pages/Home.jsx'
@@ -63,38 +63,6 @@ import AddCulturista from './components/profile/AddCulturista.jsx'
 
 
 
-
-// const router = createMemoryRouter([
-//   {
-//     path: "/",
-//     element: <Login></Login>,
-//   },
-//   {
-//     path:"/register",
-//     element:<Register/>
-//   },
-//   {
-//     path:"/home",
-//     element:<Home/>
-//   },
-//   {
-//     path:"/profile",
-//     element:<Profile/>
-//   },
-//   {
-//     path:"/calorias",
-//     element:<Calorias/>
-//   },
-//   {
-//     path:"/culturistas",
-//     element:<Culturistas/>
-//   },{
-//     path:"/rutinas",
-//     element:<Rutinas/>
-//   }
-// ]);
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>  
 
@@ -103,27 +71,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router}>
 
     </RouterProvider>
-
-        {/* <BrowserRouter  >
-          <Routes>
-                <Route path="/" element={<Login></Login>}/> 
-                <Route path="/home" element={<Home></Home>}/> 
-                <Route path="/register" element={<Register></Register>}/> 
-                <Route path="/calorias" element={<Calorias></Calorias>}/> 
-                <Route path="/culturistas" element={<Culturistas></Culturistas>}/> 
-                <Route path="/rutinas" element={<Rutinas></Rutinas>}/> 
-          </Routes>
-        </BrowserRouter> */}
-        {/* <MemoryRouter >
-          <Routes>
-              <Route path="/" element={<Login></Login>}/> 
-              <Route path="/home" element={<Home></Home>}/> 
-              <Route path="/register" element={<Register></Register>}/> 
-              <Route path="/calorias" element={<Calorias></Calorias>}/> 
-              <Route path="/culturistas" element={<Culturistas></Culturistas>}/> 
-              <Route path="/rutinas" element={<Rutinas></Rutinas>}/> 
-            </Routes>
-        </MemoryRouter> */}
+            
     </Provider>
 
 

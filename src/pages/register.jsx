@@ -1,6 +1,4 @@
 
-// import { useSelector } from "react-redux";
-
 
 import '../assets/css/register.css'
 import wave from '../assets/img/wave.svg'
@@ -15,7 +13,6 @@ import axios from 'axios';
 
 function Register() {
 
-    // const user = useSelector((state) =>state.user )
 
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
@@ -44,7 +41,7 @@ function Register() {
 
             const data = {email:email,password:pass,name:name}
             
-            await axios.post('http://localhost:3000/user', data)
+            await axios.post(import.meta.env.VITE_APIHOST+'/user', data)
             .then(response => {                                     
                 toast.success("Creado correctamente",{duration:500})
 
@@ -83,13 +80,6 @@ function Register() {
                 <Link className='login__back' to={'/'}>Regresar al login</Link>
             </div>
             </div>
-
-            
-            {/* <h1>Register</h1>
-            <h1>username: {user.username}</h1>
-            <h1>token: {user.token}</h1>
-            <h1>id: {user.id}</h1> */}
-
             
             <img src={wave} alt=""  className='wave'/>
         </div>

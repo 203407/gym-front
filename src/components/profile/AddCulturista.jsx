@@ -17,17 +17,15 @@ function AddCulturista() {
 
 
     useEffect(() =>{
-        axios.get('http://localhost:3000/culturist/byuser', 
+        axios.get(import.meta.env.VITE_APIHOST+'/culturist/byuser', 
         {headers : {
             'Authorization': `Bearer ${token}`   
         }})
         .then(response => {                                                
-            setCulturistas(response.data)            
-            // console.log(response.data)
+            setCulturistas(response.data)                        
 
         })
-        .catch(error => {
-        //   toast.error(error.response.data, { duration: 1500 });               
+        .catch(error => {        
         });        
     },[change])
 

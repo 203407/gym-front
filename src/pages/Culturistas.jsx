@@ -13,7 +13,7 @@ function Culturistas() {
     
     useEffect(()=>{
 
-        axios.get('http://localhost:3000/culturist', 
+        axios.get(import.meta.env.VITE_APIHOST+'/culturist', 
         {headers : {
             'Authorization': `Bearer ${token}`   
         }})
@@ -21,7 +21,7 @@ function Culturistas() {
             setCulturistas(response.data)            
         })
         .catch(error => {
-        //   toast.error(error.response.data, { duration: 1500 });               
+    
         });
 
     },[])
@@ -35,8 +35,7 @@ function Culturistas() {
 
             {
                 culturistas.map(element => (
-                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>
-                    // <CardCulturista key={element.id} picture={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>
+                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>                    
                 ))
 
             }

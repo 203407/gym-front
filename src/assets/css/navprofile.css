@@ -9,7 +9,7 @@
     cursor: pointer;
     margin-top: 40px;
     margin-bottom: 50px;
-    margin-left: 20px;
+    margin-left: 20px;    
 }
 
 .profile__nav__container{    
@@ -34,12 +34,9 @@
 .nav__itemw{
     text-decoration: none;
     color:white ;
-    font-size:25px ;
-    /* padding: 10px; */
-    /* background-color: #373636; */
+    font-size:25px ;    
     --clipi : polygon(0 0, 0 0, 0 100%, 0 100%);
-    /* width: 100%; */
-    /* text-align: center; */    
+    
 }
 
 
@@ -82,5 +79,9 @@
       
         padding: 10px 0 10px 4px;   
         justify-content: flex-start;        
+    }
+
+    .profile__logo{        
+        width: 40%;        
     }
 }

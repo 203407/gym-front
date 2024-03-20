@@ -1,14 +1,5 @@
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
 import { useState, useCallback} from 'react';
-import { MdDelete } from "react-icons/md";
-import TableExercices from '../calorias/TableExercices';
-import { FaRegSave } from "react-icons/fa";
-
 import { useSelector } from "react-redux";
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { IconContext } from "react-icons";
 import axios from 'axios';
 
 
@@ -60,12 +51,6 @@ function AddCultu(props) {
         setAltura(e.target.value)
     }
     
-    // const handleImage = (e) => {
-    //     setImagen(e.target.files[0])
-    // }
-
-
-
 
     
     const hanldeSubmit = async (e) =>{
@@ -87,7 +72,7 @@ function AddCultu(props) {
     
                                 
 
-       await axios.post('http://localhost:3000/culturist', cultuSave, {headers:{ 'Authorization': `Bearer ${token}`,
+       await axios.post(import.meta.env.VITE_APIHOST+'/culturist', cultuSave, {headers:{ 'Authorization': `Bearer ${token}`,
        'Content-Type': 'multipart/form-data'}})
             .then(response => {                            
                                 
@@ -107,9 +92,7 @@ function AddCultu(props) {
               
             })
             .catch(error => {
-                toast.error(error.response.data, { duration: 1500 });                  
-                // console.log(error.response.data)
-                // alert(error.response.data)
+                toast.error(error.response.data, { duration: 1500 });                              
             });
     }
 
@@ -133,9 +116,7 @@ function AddCultu(props) {
             <Toaster
                 position="top-center"
                 reverseOrder={false}            
-            />
-                                                  
-                {/* <FaRegSave  className='save__icon__culrutist' onClick={() => hanldeSave()}/>    */}
+            />                                                                  
                
         <form  onSubmit={hanldeSubmit}>
             <div className="inpust__section__containerv2">                                              
@@ -165,11 +146,6 @@ function AddCultu(props) {
                         <input type="number" name="" id="" required className= "input__sectionv2" onChange={handleAltura} value={altura} placeholder="Estatura"/>
                     </div>          
 
-
-                    {/* <div className='item__container'>
-                        <span className="tittle__section"  >Seleccionar imagen</span>
-                        <input type="file" name="" id="" className= "input__sectionv2" onChange={handleImage} />
-                    </div>           */}
 
                     <div className= {imagen[0] === undefined ? 'dropzone' : ' dropzone change__drop'}  {...getRootProps()}>
                         <input {...getInputProps()} />

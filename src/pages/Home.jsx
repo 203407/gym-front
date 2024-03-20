@@ -1,4 +1,3 @@
-import wave from '../assets/img/wave.svg'
 
 import '../assets/css/home.css'
 import Nav from '../components/home/Nav';

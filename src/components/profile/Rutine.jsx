@@ -17,15 +17,14 @@ function Rutine() {
 
 
     useEffect(() =>{
-        axios.get('http://localhost:3000/rutine/byuser', 
+        axios.get(import.meta.env.VITE_APIHOST+'/rutine/byuser', 
         {headers : {
             'Authorization': `Bearer ${token}`   
         }})
         .then(response => {                                                
             setRutinas(response.data)            
         })
-        .catch(error => {
-        //   toast.error(error.response.data, { duration: 1500 });               
+        .catch(error => {        
         });
         console.log(change)
     },[change])
@@ -67,10 +66,6 @@ function Rutine() {
 
         <AddSection show={show} change= { () => {setChange(change+1)}}  hdshow ={ ()=> setShow(false)} toast={ () => showToast()}/>        
 
-        {/* <div className={show ? "ruine__section__container" : "notShow" }>
-
-
-        </div> */}
 
         { 
            rutinas.length > 0 ?  rutinas.map( rutina => (

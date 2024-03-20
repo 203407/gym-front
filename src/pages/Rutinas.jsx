@@ -1,4 +1,3 @@
-// import '../assets/css/home.css'
 import '../assets/css/rutine.css'
 
 import Nav from '../components/home/Nav';
@@ -14,15 +13,14 @@ function Rutinas() {
     const  [rutinas,setRutinas] = useState([])
             
      useEffect(   ()  => {
-        axios.get('http://localhost:3000/rutine', 
+        axios.get(import.meta.env.VITE_APIHOST+'/rutine', 
         {headers : {
             'Authorization': `Bearer ${token}`   
         }})
         .then(response => {                                                
             setRutinas(response.data)            
         })
-        .catch(error => {
-        //   toast.error(error.response.data, { duration: 1500 });               
+        .catch(error => {        
         });
     },[])
     

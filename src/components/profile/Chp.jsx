@@ -28,15 +28,14 @@ function Chp() {
 
         const data = {pass:pass,newpass:newPass}
             
-        await axios.patch('http://localhost:3000/user/changepassword', data, {headers : {
+        await axios.patch(import.meta.env.VITE_APIHOST+'/user/changepassword', data, {headers : {
             'Authorization': `Bearer ${token}`   
         }})
         .then(response => {                            
             
             setPass('')
             setNewPass('')            
-            toast.success(response.data, { duration: 1500 });
-            // // navigate('/home')
+            toast.success(response.data, { duration: 1500 });            
         })
         .catch(error => {
             toast.error(error.response.data, { duration: 1500 });                  

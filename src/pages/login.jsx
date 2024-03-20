@@ -44,7 +44,7 @@ function Login() {
         }else{            
             const data = {email:email,password:pass}
             
-            await axios.post('http://localhost:3000/user/login', data)
+            await axios.post(import.meta.env.VITE_APIHOST+'/user/login', data)
             .then(response => {                            
                 dispatch(addUser(response.data))
                 setEmail('')
@@ -81,8 +81,7 @@ function Login() {
             </div>
 
             </div>
-            <img src={wave} alt=""  className='wave'/>
-            
+            <img src={wave} alt=""  className='wave'/>            
         </div>
         
     );

@@ -23,9 +23,7 @@ function AddSection(props) {
     const token = useSelector((state) =>state.user.token )   
 
     const [ejercicios, setEjercicios] = useState([]);
-    const [open, setOpen] = useState(false);
-    // const [dia,setDia] = useState('')
-    // const [muscle,setMuscle] = useState('')
+    const [open, setOpen] = useState(false);    
     const [sections,setSections] = useState([])
     const [nameRutine,setNameRutine] = useState('')    
 
@@ -86,7 +84,7 @@ function AddSection(props) {
 
       const eliminarInput = (index) => {
         const newInputs = [...ejercicios];
-        newInputs.splice(index, 2); // Elimina el elemento en el índice dado
+        newInputs.splice(index, 2); 
         setEjercicios(newInputs);
       };
     
@@ -96,8 +94,7 @@ function AddSection(props) {
         const rutinaToSave  = {
             namerutina:nameRutine,
             sectionrutines:sections
-        }
-        // console.log(sections.length)
+        }        
 
         if (sections.length === 0 && nameRutine === '' ){
             return   toast.error("agregue una seccion y nombre a su rutina",{duration:2000})
@@ -106,16 +103,13 @@ function AddSection(props) {
         }else if (sections.length > 0 && nameRutine === '' ){
             return   toast.error("agregue un nombre su rutina",{duration:2000})
         }
-
-        // console.log(rutinaToSave)
         
-            await axios.post('http://localhost:3000/rutine',rutinaToSave,
+        
+            await axios.post(import.meta.env.VITE_APIHOST+'/rutine',rutinaToSave,
             {headers : {
                 'Authorization': `Bearer ${token}`   
             }})
-            .then(response => {                                                
-                // setRutinas(response.data)            
-                // console.log(response.data)                                
+            .then(response => {                                                                                             
                 props.toast()
                 setEjercicios([])
                 setOpen(false)
@@ -131,9 +125,8 @@ function AddSection(props) {
 
 
             })
-            .catch(error => {
-            //   toast.error(error.response.data, { duration: 1500 });    
-            console.log(error.response.data)           
+            .catch(error => {            
+                console.log(error.response.data)           
             });       
 
 
@@ -206,32 +199,28 @@ function AddSection(props) {
                     
 
                     {ejercicios.map((value, index) => {
-                    if (index % 2 === 0) {
-                    // Si el índice es par, se muestra un par de inputs para nombre y apellido
+                    if (index % 2 === 0) {                    
                         return (
                             <div key={index} className='inputs__creates'>
                             <input
                                 type="text"
                                 value={ejercicios[index]}
-                                onChange={(event) => handleChange(index, event)}
-                                // placeholder="Nombre"
+                                onChange={(event) => handleChange(index, event)}                                
                                 required
                                 className='input__ejercices'
                             />
                             <input
                                 type='number'
                                 value={ejercicios[index + 1]}
-                                onChange={(event) => handleChange(index + 1, event)}
-                                // placeholder="Repericiones"
+                                onChange={(event) => handleChange(index + 1, event)}                                
                                 required
                                 className='input__ejercices'
-                            />
-                            {/* <button onClick={() => eliminarInput(index)}>del</button> */}
+                            />                            
                             <MdDelete  onClick={() => eliminarInput(index)}/>
                             </div>
                         );
                     }
-                        return null; // Si el índice es impar, no se renderiza nada                    
+                        return null;
                     })}
 
 
