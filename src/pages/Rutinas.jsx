@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import SectionRutine from '../components/calorias/SectionRutine';
 
 function Rutinas() {
-    const token = useSelector((state) =>state.user.user.token )        
+    const token = useSelector((state) =>state.user.token )        
     const  [rutinas,setRutinas] = useState([])
             
      useEffect(  ()  => {            
