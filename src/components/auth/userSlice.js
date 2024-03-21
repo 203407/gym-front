@@ -9,7 +9,9 @@ const st = {
 
 
 const usuario = localStorage.getItem('USER')
-const initialState = usuario ? JSON.parse(usuario) : st
+const parses  =  JSON.parse(usuario)
+const initialState = usuario ? parses.user : st
+
 
 export const userSlice = createSlice({
     name:"user",

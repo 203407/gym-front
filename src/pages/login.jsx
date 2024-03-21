@@ -62,7 +62,7 @@ function Login() {
             });
         }
     }
-   
+        
     return (  
         <div className='container'>
 
@@ -81,6 +81,7 @@ function Login() {
             </div>
 
             </div>
+            
             <img src={wave} alt=""  className='wave'/>            
         </div>
         

@@ -6,7 +6,7 @@ import {  useState } from "react";
 import { useSelector } from "react-redux";
 
 function Profile() {    
-    const user = useSelector((state) =>state.user.user )    
+    const user = useSelector((state) =>state.user )    
     const [visi, setVisi] = useState(true)
     
     const handleVisi = () =>{      

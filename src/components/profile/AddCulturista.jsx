@@ -12,7 +12,7 @@ function AddCulturista() {
 
     const [culrutista,setCulturistas] = useState([])
     const [change,setChange] = useState(0)
-    const token = useSelector((state) =>state.user.user.token ) 
+    const token = useSelector((state) =>state.user.token ) 
     const [show,setShow] = useState(false)
 
 

@@ -20,7 +20,7 @@ import toast, {Toaster} from 'react-hot-toast'
 
 
 function AddSection(props) {
-    const token = useSelector((state) =>state.user.user.token )   
+    const token = useSelector((state) =>state.user.token )   
 
     const [ejercicios, setEjercicios] = useState([]);
     const [open, setOpen] = useState(false);    
