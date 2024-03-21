@@ -12,7 +12,7 @@ import {useDropzone} from 'react-dropzone'
 
 function AddCultu(props) {
 
-    const token = useSelector((state) =>state.user.token )                   
+    const token = useSelector((state) =>state.user.user.token )
     
     const [nombre,setNombre] = useState("")
     const [compe,setCompe] = useState('')

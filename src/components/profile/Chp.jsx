@@ -10,7 +10,7 @@ function Chp() {
     const [pass,setPass] = useState('')
     const [newPass,setNewPass] = useState('')
 
-    const token = useSelector((state) =>state.user.token )    
+    const token = useSelector((state) =>state.user.user.token ) 
 
 
     const handlePass = (e) =>{

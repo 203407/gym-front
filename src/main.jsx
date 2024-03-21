@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -64,6 +64,7 @@ import AddCulturista from './components/profile/AddCulturista.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+    
   <React.StrictMode>  
 
     <Provider store={store}>

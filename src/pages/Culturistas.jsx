@@ -8,7 +8,7 @@ import CardCulturista from '../components/culturistas/CardCulturista';
 import Footer from '../components/home/Footer';
 function Culturistas() {
 
-    const token = useSelector((state) =>state.user.token )    
+    const token = useSelector((state) =>state.user.user.token )
     const [culturistas,setCulturistas] = useState([])
     
     useEffect(()=>{

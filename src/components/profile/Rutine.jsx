@@ -11,7 +11,7 @@ import toast, {Toaster} from 'react-hot-toast'
 function Rutine() {
     const [rutinas,setRutinas] = useState([])
     const [show,setShow] = useState(false)
-    const token = useSelector((state) =>state.user.token )    
+    const token = useSelector((state) =>state.user.user.token )    
     
     const [change,setChange] = useState(0)
 

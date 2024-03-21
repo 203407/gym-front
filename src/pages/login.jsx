@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import '../assets/css/login.css'
 
@@ -17,7 +17,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../components/auth/userSlice.js';
 import { useNavigate } from 'react-router-dom';
 
-
+import { saveUser} from '../components/auth/store.js'
 
 function Login() {
 
@@ -33,8 +33,7 @@ function Login() {
 
     const handlechangepassword = (e) =>{        
         setPass(e.target.value)
-    }
-
+    }  
 
     const sendRequest = async (e) =>{
         e.preventDefault();
@@ -47,6 +46,7 @@ function Login() {
             await axios.post(import.meta.env.VITE_APIHOST+'/user/login', data)
             .then(response => {                            
                 dispatch(addUser(response.data))
+                saveUser()
                 setEmail('')
                 setPass('')
                 navigate('/home')

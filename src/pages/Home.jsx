@@ -4,7 +4,6 @@ import Nav from '../components/home/Nav';
 import Footer from '../components/home/Footer';
 import H from '../assets/img/h.png'
 
-
 function Home() {
     return ( 
         <div className="home__container">
@@ -16,7 +15,7 @@ function Home() {
                     </h1>
 
                     <img src={H} alt="home"  className='home__img'/>
-                </div>                
+                </div>                               
             <Footer st={1} />
         </div>
      );

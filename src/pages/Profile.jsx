@@ -5,9 +5,8 @@ import '../assets/css/profile.css'
 import {  useState } from "react";
 import { useSelector } from "react-redux";
 
-function Profile() {
-
-    const user = useSelector((state) =>state.user )    
+function Profile() {    
+    const user = useSelector((state) =>state.user.user )    
     const [visi, setVisi] = useState(true)
     
     const handleVisi = () =>{      
@@ -16,10 +15,7 @@ function Profile() {
             setVisi(false)
         }
     }
-
   
-
-
 
     return (  
         <div> 

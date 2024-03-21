@@ -7,3 +7,10 @@ import userReducer  from './userSlice.js'
         user : userReducer
     }
  })
+
+export const saveUser = () => {    
+    const state = store.getState()
+    localStorage.setItem('USER', JSON.stringify(state))
+}
+
+
