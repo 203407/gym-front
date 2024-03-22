@@ -4,7 +4,7 @@
     background-color: #373636;
     position: absolute;    
     top: 20%;
-    left: 35%;
+    left: 40%;
     border-radius: 10px;    
     width: 50%;
     height: 150px;
@@ -28,8 +28,7 @@
     left: 25%;      
     border-radius: 10px;    
     width: 70%;
-    height: max-content;    
-    /* height: clamp(300px,100vh,100vh); */
+    height: max-content;        
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,8 +111,7 @@
     border-radius: 10px;
     filter: drop-shadow(0px 2px 0px #0085FF);
     font-size: 20px;    
-    height: 30px;    
-    /* width: 40%;     */
+    height: 30px;        
     outline: none;    
 }
 
@@ -159,8 +157,7 @@
 }
 
 .bt__actions{
-    background-color: #7F7F7F;
-    /* border: none; */
+    background-color: #7F7F7F;    
     color: white;
     font-size: 17px;
     padding: 3px 6px;
@@ -172,6 +169,7 @@
 .out__rutines{
     margin-top: 20px;
 }
+
 .actions{
     width: 80%;
     margin: 0 auto;
@@ -214,17 +212,8 @@
     width: 80%;
     position:absolute;
     right: 0;
-    /* margin: 0 auto;
-    display: flex;
-    justify-content:flex-end;
-    align-items: center; */
+
 }
-
-
-.item__container{
-    /* width: 80%; */
-}
-
 
 
 .input__sectionv2{
@@ -240,8 +229,6 @@
 }
 
 
-/*  */
-
 .inpust__section__containerv2{
     display: flex;
     flex-direction: column;    
@@ -251,14 +238,6 @@
     padding-bottom: 10px;
 }
 
-/* .save__icon__culrutist{
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-} */
 
 .cul__action__butons{
     display: flex;
@@ -269,8 +248,7 @@
 }
 
 .btn___add__culturist{
-    font-size: 18px;
-    /* padding: 5px 35px; */
+    font-size: 18px;    
     width: 160px;
     padding: 5px 0;
     border-radius: 10px;
@@ -328,8 +306,7 @@
 
     .save__icon{
         width: 30px;
-        height: 20px;
-        cursor: pointer;
+        height: 20px;        
     }
     
 
@@ -354,3 +331,113 @@
     }
     
 }
+
+
+
+@media (max-width:600px) {
+
+    .profile__container{              
+        top: 35%;        
+        left: 50%;
+        transform: translateX(-50%);
+               
+        width: 60%;        
+    }
+
+    .ll__rutinas__profile{
+        font-size: 25px;
+    }
+
+    .main__container__both{            
+        width: 90%;    
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .out__rutines{
+        font-size: 25px;
+    }
+
+    .icon__provider__profile{
+        height:40px;   
+        width: 25px;             
+    }
+
+    .changess{
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        
+    }
+    
+
+    .trueshow{        
+        width: 80%;        
+    }
+    
+    .tittle__section{
+        font-size: 16px;
+        width: 70%;        
+    }
+
+    .input__section{        
+        font-size: 16px;            
+        width: 70%;                
+    }
+
+    .add__section{        
+        font-size: 16px;        
+    }
+
+    .save__icon{
+        width: 25px;
+        height: 20px;                   
+    }
+    
+    .input__ejercices{
+        width: 60%;
+    }
+      
+
+    .ll__cultursitas{
+        font-size: 25px;
+    }
+
+    .input__sectionv2{        
+        font-size: 16px;    
+        height: 30px;    
+        width: 180px;  
+    }
+
+    .dropzone{
+       
+        width: 280px;
+        height: 70px;
+      
+    }
+    
+    .p__drop{
+        font-size: 15px;
+        text-align: center;
+    }
+
+
+    .dropzone{       
+        width: 200px;
+        height: 60px;
+      
+    }
+    
+    .p__drop{
+        font-size: 11px;        
+    }
+
+    .btn___add__culturist{
+        font-size: 13px;        
+        width: 70px;                        
+        margin-top: -20px;
+    }
+
+
+}   

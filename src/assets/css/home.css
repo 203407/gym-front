@@ -46,3 +46,12 @@
     }
     
 }
+
+
+@media (max-width:600px) {
+    
+    .title__home{    
+        margin-top: 70px;
+        font-size: 25px;        
+    }
+}

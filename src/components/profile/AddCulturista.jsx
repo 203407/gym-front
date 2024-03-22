@@ -47,7 +47,7 @@ function AddCulturista() {
                 reverseOrder={false}            
             />
 
-                <h1 className="ll">Culturistas</h1>
+                <h1 className="ll__cultursitas">Culturistas</h1>
 
 
             {
@@ -64,15 +64,19 @@ function AddCulturista() {
 
             <AddCultu show={show} change= { () => {setChange(change+1)}}  hdshow ={ ()=> setShow(false)} toast={ () => showToast()}/>        
 
+                <div>
+
+                
             {
 
                 culrutista.length > 0 ? culrutista.map(element => (
-                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>
+                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>                    
                 ))
                 :
                 <h1 className="out__rutines">  Sin culturistas</h1>
             }
 
+                </div>
         </div>
      );
 }

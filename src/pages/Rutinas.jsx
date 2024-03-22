@@ -32,7 +32,7 @@ function Rutinas() {
         <Nav pag={2}/>
   
         <div className='card__rutinas rutinas__expand'>
-            <h1 className='titlte'>Rutinas de usuarios</h1>
+            <h1 className='titlte__rutinas'>Rutinas de usuarios</h1>
         </div>
        
         { 

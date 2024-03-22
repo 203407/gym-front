@@ -22,10 +22,7 @@ function Chp() {
     }
 
     const handleSubmit = async () => {
-        console.log(pass)
-        console.log(newPass)
-
-
+        
         const data = {pass:pass,newpass:newPass}
             
         await axios.patch(import.meta.env.VITE_APIHOST+'/user/changepassword', data, {headers : {
@@ -51,7 +48,7 @@ function Chp() {
                 position="top-center"
                 reverseOrder={false}            
             />
-            <h1 className="ll">Cambiar contraseña</h1>
+            <h1 className="ll__pas">Cambiar contraseña</h1>
 
            
                 

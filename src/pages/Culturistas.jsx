@@ -30,12 +30,12 @@ function Culturistas() {
         <div className="">
             <Nav pag={3}/>
             <div className='card__culturistas'>
-                <h1 className='titlte'>Culturistas</h1>
+                <h1 className='titlte__culturistas'>Culturistas</h1>
             </div>
 
             {
                 culturistas.map(element => (
-                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>                    
+                    <CardCulturista key={element.id} picture={element.picture} name={element.name}  nameuser={element.nameuser} weight={element.weight}  height={element.height} competitions={element.competitions}/>                                        
                 ))
 
             }

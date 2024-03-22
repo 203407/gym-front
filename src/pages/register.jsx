@@ -54,36 +54,35 @@ function Register() {
             .catch(error => {
               toast.error(error.response.data, { duration: 1500 });               
             });
-
-
-            console.log(name,email,pass)
+        
         }
     }
 
     return (  
+        <>
+               
+            <div className="register__container">
 
-        <div className="register__container">
-
-            <Toaster
-                position="top-center"
-                reverseOrder={false}            
-            />
-
-            <div className="register__card">
-                <h1 className="register__tittle">Registro</h1>
-                <RegisterForm send={sendRequest} handlechangename={handlechangename} 
-                handlechangeemail={handlechangeemail}
-                handlechangepassword={handlechangepassword}
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}            
                 />
 
-            <div className='register__container__message__back'>
-                <Link className='login__back' to={'/'}>Regresar al login</Link>
-            </div>
-            </div>
-            
-            <img src={wave} alt=""  className='wave'/>
-        </div>
+                <div className="register__card">
+                    <h1 className="register__tittle">Registro</h1>
+                    <RegisterForm send={sendRequest} handlechangename={handlechangename} 
+                    handlechangeemail={handlechangeemail}
+                    handlechangepassword={handlechangepassword}
+                    />
 
+                <div className='register__container__message__back'>
+                    <Link className='login__back' to={'/'}>Regresar al login</Link>
+                </div>
+                </div>
+            </div>
+            <img src={wave} alt=""  className='wave'/>
+      
+            </>
     );
 }
 

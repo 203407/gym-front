@@ -20,10 +20,12 @@
 .what{
     margin-top: 60px;
 }
+
 .parrafo__calorias{
     text-align: justify;
     padding-bottom: 15px;
 }
+
 .first__ul{
     margin-top: 50px;
     margin-bottom: 30px;    
@@ -57,4 +59,21 @@
 
 .footer__other{
     margin-top: 60px;
+}
+
+@media (max-width:600px) {
+    .titlte{
+        text-align: center;
+        font-size: 20px;    
+    }
+    
+    .card__calorias{
+       
+        width: 70%;
+    }
+
+    .img__factor{
+        width: 100%;    
+    }
+
 }

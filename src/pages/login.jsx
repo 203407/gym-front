@@ -64,26 +64,31 @@ function Login() {
     }
         
     return (  
-        <div className='container'>
 
-            <Toaster
-                position="top-center"
-                reverseOrder={false}            
-            />
+        <>
+        
+            <div className='container'>
 
-            <div className="card">             
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}            
+                />
 
-            <h1 className='tittle'>Bienvenido</h1>
-            <LoginForm handlechangeemail={handlechangeemail} handlechangepassword={handlechangepassword} send={sendRequest}/>            
+                <div className="card">             
 
-            <div className='container__message'>
-                <Link className='login__create' to={'/register'}> No tienes una, Crea una Cuenta</Link>
+                    <h1 className='tittle'>Bienvenido</h1>
+                    <LoginForm handlechangeemail={handlechangeemail} handlechangepassword={handlechangepassword} send={sendRequest}/>            
+
+                    <div className='container__message'>
+                        <Link className='login__create' to={'/register'}> No tienes una, Crea una Cuenta</Link>
+                    </div>
+
+                </div>
             </div>
-
-            </div>
-            
             <img src={wave} alt=""  className='wave'/>            
-        </div>
+        
+
+        </>
         
     );
 }

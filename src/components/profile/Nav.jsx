@@ -17,13 +17,12 @@ function Nav(props) {
     return (
 
         <>
-        <aside className='profile__header'> 
-            <nav className='profile__nav__container'>
+        <aside className='profile__header'>             
 
                 <img src={logo} alt="logo" className='profile__logo' onClick={()=>moveTOH()}/>                
+                
+                    <ul className='profile__ul__nav'> 
 
-                <div className='profile__ul__container'>
-                    <ul className='profile__ul__nav'>                                            
                         <div className="container__link">
                             <NavLink className={ ({isActive})=>{return isActive ? 'nav__itemw selecte__item': 'nav__itemw'}} to='/profile/chpass' onClick={()=> props.change()}>Cambiar contraseña</NavLink>
                         </div>
@@ -36,8 +35,6 @@ function Nav(props) {
                         </div>
                                                 
                     </ul>   
-                </div>                
-            </nav>
         </aside>
     
         </>

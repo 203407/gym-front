@@ -25,8 +25,7 @@ function Rutine() {
             setRutinas(response.data)            
         })
         .catch(error => {        
-        });
-        console.log(change)
+        });        
     },[change])
 
     const handleShow =()=>{
@@ -45,7 +44,7 @@ function Rutine() {
         />
 
 
-            <h1 className="ll">Rutinas</h1>
+            <h1 className="ll__rutinas__profile">Rutinas</h1>
         {
 
             rutinas.length < 3 ?  (<div className="add__container">        
@@ -61,19 +60,16 @@ function Rutine() {
 
         
 
-
-
-
         <AddSection show={show} change= { () => {setChange(change+1)}}  hdshow ={ ()=> setShow(false)} toast={ () => showToast()}/>        
+        
 
-
+        
         { 
            rutinas.length > 0 ?  rutinas.map( rutina => (
                 <SectionRutine id={rutina.rutine.id} key={rutina.rutine.id} rutinaname={rutina.rutine.namerutina} name={rutina.rutine.nameuser}  exercices={rutina.exercices}/>                
             ))
             : <h1 className="out__rutines">Sin rutinas</h1>
         }           
-
             
         </div> 
 

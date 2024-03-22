@@ -1,9 +1,6 @@
 
 .footer__home{
-    position: absolute;
-    
-    /* left: 50%;
-    transform: translateX(-50%); */    
+    position: absolute;    
     background-color: #191919;
     width: 100%;
     height: 100px;    
@@ -29,6 +26,25 @@
 .item__footer{
     text-decoration: none;        
 }
+
 .footer__img{
     width: 120%;
+}
+
+
+
+
+@media (max-width:600px) {
+    
+
+    .footer__img{
+        width: 90%;
+    }
+    
+    .footer__ul{    
+        width: 30%;    
+      
+    }
+
+    
 }

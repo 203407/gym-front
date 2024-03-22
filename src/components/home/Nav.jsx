@@ -4,9 +4,11 @@ import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/nav.css'
+import { useState } from 'react';
 
 function Nav(props) {    
     const navigate = useNavigate()
+    const [show,setShow] = useState(true)
 
     const moveTOP = () => {        
         navigate('/profile')
@@ -16,13 +18,18 @@ function Nav(props) {
         navigate('/home')
     }
 
+    const handleShow = () =>{
+        setShow(!show)
+
+    }
+
     return (  
     <>
         <header className='header'>
-            <nav className='nav__container'>
-
+          
+            <nav className= 'nav__container'    >
                 <img src={logo} alt="logo" className='logo' onClick={()=>moveTOH()}/>
-                
+                                                
 
                 <div className='ul__container'>
                     <ul className='ul__nav'>                    
