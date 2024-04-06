@@ -2,7 +2,7 @@ import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons";
 import { HiOutlineLogout } from "react-icons/hi";
 import { useDispatch } from 'react-redux';
-import { delUser } from "../../../../fronturlshortener/src/redux/userSlice.js";
+import { delUser } from "../auth/userSlice.js"
 import { useNavigate } from 'react-router-dom';
 
 function Logg() {
