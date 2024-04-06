@@ -41,19 +41,22 @@ function Login() {
         if (email === '' || pass === ''){
             toast.error("Completa todos los campos " ,{duration: 1500,})
         }else{            
-            const data = {email:email,password:pass}
-            
+            const data = {email:email,password:pass}            
             await axios.post(import.meta.env.VITE_APIHOST+'/user/login', data)
-            .then(response => {                            
-                dispatch(addUser(response.data))
+            .then(response => {       
+                
+                const datas = {
+                    ...response.data,
+                    time:new Date() 
+                }
+                dispatch(addUser(datas))
                 saveUser()
                 setEmail('')
                 setPass('')
-                navigate('/home')
+                navigate('/')
             })
-            .catch(error => {
-                
-                if(error.code !== "ERR_NETWORK"){
+            .catch(error => {                
+                if(error.code !== "ERR_NETWORK"){                    
                     toast.error(error.response.data, { duration: 1500 });               
                 }else{
                     toast.error("Por favor intente mas tarde", { duration: 1500 });               

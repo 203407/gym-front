@@ -76,7 +76,7 @@ function Register() {
                     />
 
                 <div className='register__container__message__back'>
-                    <Link className='login__back' to={'/'}>Regresar al login</Link>
+                    <Link className='login__back' to={'/login'}>Regresar al login</Link>
                 </div>
                 </div>
             </div>

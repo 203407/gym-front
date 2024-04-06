@@ -1,17 +1,20 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import toast, {Toaster} from 'react-hot-toast'
 import { useSelector } from "react-redux";
 import axios from 'axios';
 import '../../assets/css/chpassword.css'
-
+import {useDispatch} from 'react-redux'
+import { checkToken } from '../../checkToken/checkToken';
+import {useNavigate} from 'react-router-dom'
 
 function Chp() {
     const [pass,setPass] = useState('')
     const [newPass,setNewPass] = useState('')
 
-    const token = useSelector((state) =>state.user.token ) 
-
+    const user = useSelector((state) =>state.user ) 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handlePass = (e) =>{
         setPass(e.target.value)
@@ -21,12 +24,25 @@ function Chp() {
         setNewPass(e.target.value)
     }
 
+    useEffect(()=> {
+        const statusToken = checkToken(user.time,dispatch)            
+            
+        if (statusToken){
+            toast.error('La sesion ha caducado', {duration:1000})
+
+            setTimeout(()=> {
+                navigate('/')
+            },1500)
+        }
+        
+    },[])
+
     const handleSubmit = async () => {
         
         const data = {pass:pass,newpass:newPass}
             
         await axios.patch(import.meta.env.VITE_APIHOST+'/user/changepassword', data, {headers : {
-            'Authorization': `Bearer ${token}`   
+            'Authorization': `Bearer ${user.token}`   
         }})
         .then(response => {                            
             
@@ -38,8 +54,6 @@ function Chp() {
             toast.error(error.response.data, { duration: 1500 });                  
         });
             
-
-
     }
 
     return (

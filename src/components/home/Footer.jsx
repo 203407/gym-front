@@ -6,7 +6,7 @@ import i from '../../assets/img/i.png'
 import '../../assets/css/footer.css'
 
 const moveTOH = () => {        
-    navigate('/home')
+    navigate('/')
 }
 
 

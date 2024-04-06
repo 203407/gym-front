@@ -6,27 +6,41 @@ import toast, {Toaster} from 'react-hot-toast'
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { IconContext } from "react-icons";
 import AddCultu from "./AddCultu";
-
+import {useDispatch} from 'react-redux'
+import { checkToken } from '../../checkToken/checkToken';
+import {useNavigate} from 'react-router-dom'
 
 function AddCulturista() {
 
     const [culrutista,setCulturistas] = useState([])
     const [change,setChange] = useState(0)
-    const token = useSelector((state) =>state.user.token ) 
+    const user = useSelector((state) =>state.user ) 
     const [show,setShow] = useState(false)
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(() =>{
-        axios.get(import.meta.env.VITE_APIHOST+'/culturist/byuser', 
-        {headers : {
-            'Authorization': `Bearer ${token}`   
-        }})
-        .then(response => {                                                
-            setCulturistas(response.data)                        
 
-        })
-        .catch(error => {        
-        });        
+        const statusToken = checkToken(user.time,dispatch)            
+                    
+        if (statusToken){            
+            setTimeout(()=> {
+                navigate('/')
+            },1500)         
+        }else{
+
+            axios.get(import.meta.env.VITE_APIHOST+'/culturist/byuser', 
+            {headers : {
+                'Authorization': `Bearer ${user.token}`   
+            }})
+            .then(response => {                                                
+                setCulturistas(response.data)                        
+
+            })
+            .catch(error => {        
+            });        
+        }
     },[change])
 
     const handleShow =()=>{

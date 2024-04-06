@@ -67,6 +67,11 @@ th{
 }
 
 
+.titlte__rutinas{
+ text-align: center;
+}
+
+
 @media (max-width:1024px) {
     th{
         font-size: 20px;            
@@ -95,8 +100,7 @@ th{
 
 @media (max-width:600px) {
     .titlte__rutinas{
-        font-size: 27px;
-        text-align: center;
+        font-size: 27px;        
     }
 
     

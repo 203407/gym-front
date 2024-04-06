@@ -18,7 +18,7 @@ import AddCulturista from './components/profile/AddCulturista.jsx'
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path:"/login" ,
       element: <Login></Login>,
     },
     {
@@ -26,7 +26,7 @@ import AddCulturista from './components/profile/AddCulturista.jsx'
       element:<Register/>
     },
     {
-      path:"/home",
+      path:"/",
       element:<Home/>
     },    
     {
@@ -64,9 +64,7 @@ import AddCulturista from './components/profile/AddCulturista.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    
-  <React.StrictMode>  
-
+      
     <Provider store={store}>
 
     <RouterProvider router={router}>
@@ -74,7 +72,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </RouterProvider>
             
     </Provider>
-
-
-  </React.StrictMode>,
+  
 )

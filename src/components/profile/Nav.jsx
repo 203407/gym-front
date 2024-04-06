@@ -10,7 +10,7 @@ function Nav(props) {
 
 
     const moveTOH = () => {        
-        navigate('/home')
+        navigate('/')
     }
 
 

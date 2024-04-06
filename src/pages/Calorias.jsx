@@ -2,12 +2,42 @@ import Nav from '../components/home/Nav';
 import '../assets/css/calorias.css'
 import factor from '../assets/img/factor.png'
 import Footer from '../components/home/Footer'; 
+import { useEffect,useState } from 'react';
+import {useSelector} from 'react-redux'
+
+import { checkToken } from '../checkToken/checkToken';
+import {useDispatch} from 'react-redux'
+import toast, {Toaster} from 'react-hot-toast'
+
 
 function Calorias() {
+
+    const user = useSelector((state) =>state.user )        
+    const [logg,setLogg] = useState(false)
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+        if(user.token == ''){            
+            setLogg(false)
+        }else{                  
+            const statusToken = checkToken(user.time,dispatch )
+            
+            if (statusToken){
+                toast.error('La sesion ha caducado', {duration:1000})
+            }
+
+            setLogg(true)                                                  
+        }
+    },[user])
+
     return (  
         <div className="calorias">
-            <Nav pag={1}/>
-
+            <Nav pag={1} logg={logg}/>
+            <Toaster
+                    position="top-center"
+                    reverseOrder={false}            
+                />
             <div className="card__calorias ">
                 <h1 className='titlte'>Calorias</h1>
             </div>

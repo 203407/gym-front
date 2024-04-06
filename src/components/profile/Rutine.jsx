@@ -6,26 +6,39 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { IconContext } from "react-icons";
 import AddSection from "./AddSection";
 import toast, {Toaster} from 'react-hot-toast'
-
+import {useDispatch} from 'react-redux'
+import { checkToken } from '../../checkToken/checkToken';
+import {useNavigate} from 'react-router-dom'
 
 function Rutine() {
     const [rutinas,setRutinas] = useState([])
     const [show,setShow] = useState(false)
-    const token = useSelector((state) =>state.user.token )    
+    const user = useSelector((state) =>state.user )    
     
     const [change,setChange] = useState(0)
-
-
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    
     useEffect(() =>{
-        axios.get(import.meta.env.VITE_APIHOST+'/rutine/byuser', 
-        {headers : {
-            'Authorization': `Bearer ${token}`   
-        }})
-        .then(response => {                                                
-            setRutinas(response.data)            
-        })
-        .catch(error => {        
-        });        
+        const statusToken = checkToken(user.time,dispatch)            
+            
+        if (statusToken){                                                    
+            setTimeout(()=> {
+                navigate('/')
+            },1500)
+        }else{
+            axios.get(import.meta.env.VITE_APIHOST+'/rutine/byuser', 
+            {headers : {
+                'Authorization': `Bearer ${user.token}`   
+            }})
+            .then(response => {                                                
+                setRutinas(response.data)            
+            })
+            .catch(error => {        
+            });        
+        }
+
+      
     },[change])
 
     const handleShow =()=>{

@@ -1,28 +1,20 @@
 import logo from '../../assets/img/logo.png'
 import { Link } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
-import { IconContext } from "react-icons";
+
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/nav.css'
-import { useState } from 'react';
+import Logg from './Logg';
+import NotLogg from './NotLogg';
+
 
 function Nav(props) {    
-    const navigate = useNavigate()
-    const [show,setShow] = useState(true)
+    const navigate = useNavigate()   
 
-    const moveTOP = () => {        
-        navigate('/profile')
-    }
-
+    
     const moveTOH = () => {        
-        navigate('/home')
+        navigate('/')
     }
-
-    const handleShow = () =>{
-        setShow(!show)
-
-    }
-
+    
     return (  
     <>
         <header className='header'>
@@ -39,9 +31,11 @@ function Nav(props) {
                     </ul>   
                 </div>                
 
-                <IconContext.Provider value={{ color: "white", className: "icon__provider" }}>
-                    <CgProfile className='iconprofile' onClick={() => moveTOP()}/>
-                </IconContext.Provider>
+                {
+                    props.logg ? <Logg/> : <NotLogg/>
+                }
+
+                
   
             </nav>
         </header>
